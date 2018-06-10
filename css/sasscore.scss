@@ -1,0 +1,188 @@
+/***** Global Design *****/
+
+p {
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  background-color: #12171c;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*****  End Global  *****/
+
+/***** Navigation Bar *****/
+
+.navbar {
+  font-family: "MontserratRegular";
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  padding: 0;
+  background: #12171c;
+  .container {
+    margin: auto;
+    padding: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    .nav-main-link {
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      float: none;
+      min-width: 125px;
+      line-height: 70px;
+      position: relative;
+      background: none;
+      border: none;
+      margin: 0;
+      a {
+        color: #FFF;
+        display: block;
+        height: 100%;
+        padding: 0 30px;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+      }
+
+    }
+    .nav-main-link.ui-tabs-active {
+      padding: 0;
+      margin-bottom: 0;
+      a {
+        cursor: default;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .content-container {
+    padding: 0;
+    a {
+      color: #FFF;
+    }
+  }
+}
+.navbar.ui-tabs {
+  border: none;
+}
+.nav-main-link a {
+  transition: color .3s;
+  &:hover {
+    color: #de541e;
+  }
+  &:after {
+    border-bottom: 3px solid #de541e;
+    width: 0;
+    content: '';
+    height: 2px;
+    transition: width .3s;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+/***** End Navigation *****/
+
+.body-content {
+  font-family: "RalewayRegular";
+  #cover-image {
+    background: url("../images/cover-image-1.jpg") no-repeat;
+    height: 92vh;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    color: #FFF;
+  }
+  .image-overlay {
+    background: rgba(18, 23, 28, 0.7);
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+  }
+  .banner {
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    width: 100%;
+    .banner-text {
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: inline-block;
+      max-width: 70%;
+      margin-bottom: 50px;
+      h1 {
+        text-align: center;
+        font-size: 55px;
+        margin: 0;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+    }
+    .banner-content {
+      text-align: left;
+      padding: 0 10px;
+      .ui-autocomplete {
+        position: relative;
+      }
+    }
+  }
+  .btn-curved {
+    border: 1px dashed #FFF;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: border-style .3s;
+
+    &:hover{
+      border-style: solid;
+    }
+  }
+  .no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+  .ui-accordion-content,
+  .ui-tabs-panel {
+    p,ul,li,h3,h2,h1{
+      color: #000;
+    }
+  }
+  .ui-tabs-nav {
+    a {
+      color: #000;
+    }
+  }
+  .ui-tabs-active {
+    a {
+      color: #FFF;
+    }
+  }
+}
+/*****  End Content *****/
